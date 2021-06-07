@@ -7,13 +7,9 @@ var forecastSymbol = document.querySelector('forecast')
 
 button.addEventListener('click', function() {
     fetch(
-        'https://api.openweathermap.org/data/2.5/weather?q=' +
+        'https://api.openweathermap.org/data/2.5/weather?q='+
         inputValue.value +
-        '&appid=e12acf058398663e5a5c79e83134f180&units=imperial' +
-        
-        'https://api.openweathermap.org/data/2.5/forecast?id='+ 
-        inputValue + 
-        '&appid=e12acf058398663e5a5c79e83134f180&units=imperial&forcast.symbol=forecast.symbol.var'
+        '&appid=e12acf058398663e5a5c79e83134f180&units=imperial'
     )
         .then(response => response.json())
         
